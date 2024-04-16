@@ -25,7 +25,7 @@ public class GenerateLevel : MonoBehaviour
     }
     IEnumerator generateSection()
     {
-        secNum = Random.Range(0, 3);
+        secNum = Random.Range(0, 7);
         Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
         zPos += 50;
         yield return new WaitForSeconds(3);

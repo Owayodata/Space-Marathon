@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -339,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &404332369
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -356,7 +356,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &404332370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af94bf4951227df43b7bbaf4ce0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0.3
+  RotateSpeed: 0.1
 --- !u!1 &541697943
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +553,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &578542302
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -569,7 +570,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &578542303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af94bf4951227df43b7bbaf4ce0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0.3
+  RotateSpeed: 0.1
 --- !u!1 &636571710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,10 +1465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af94bf4951227df43b7bbaf4ce0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0.3
+  RotateSpeed: 0.1
 --- !u!95 &1092978373
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1483,7 +1485,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1207069821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1582,10 +1585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af94bf4951227df43b7bbaf4ce0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0.3
+  RotateSpeed: 0.1
 --- !u!95 &1207069825
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1602,7 +1605,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1355112214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,10 +2042,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af94bf4951227df43b7bbaf4ce0d8508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0.3
+  RotateSpeed: 0.1
 --- !u!95 &1767503840
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2058,7 +2062,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1909522152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2209,6 +2214,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2287,7 +2293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb2b83a53d843d4bbaf2e42cb4c13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charPrices: 00000000c8000000c8000000e8030000d0070000
+  charPrices: 00000000f4010000e80300008813000010270000
   leftButton: {fileID: 1585255895}
   rightButton: {fileID: 962102240}
   Play: {fileID: 697944949}

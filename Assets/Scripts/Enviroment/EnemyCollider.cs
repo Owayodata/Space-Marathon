@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCollider : MonoBehaviour
@@ -6,6 +8,7 @@ public class EnemyCollider : MonoBehaviour
     public GameObject mainCamera;
     public GameObject levelControl;
     public GameObject animator;
+    [SerializeField] GameObject shield;
 
     private PlayerMovement playerMovement;
     private DistanceCounter distanceCounter;
@@ -13,7 +16,7 @@ public class EnemyCollider : MonoBehaviour
     private EndRunSequence endRunSequence;
     private Animator cameraAnimator;
 
-    void Awake()
+    void Start()
     {
         crashChar = GameObject.Find("LevelControl/CrashChar").GetComponent<AudioSource>();
         mainCamera = GameObject.Find("/Player(Clone)/Camera");
@@ -25,28 +28,29 @@ public class EnemyCollider : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+        void OnTriggerEnter(Collider other)
         {
-            
-            
-            playerMovement.enabled = false;
+            if (other.gameObject.CompareTag("Enemy") && !shield.activeSelf)
+            {
 
-            
-            distanceCounter.enabled = false;
-            generateLevel.enabled = false;
-            endRunSequence.enabled = true;
 
-            
-            if (crashChar != null)
-                crashChar.Play();
+                playerMovement.enabled = false;
 
-            
-            if (animator != null)
-                animator.GetComponent<Animator>().Play("Stumble Backwards");
 
-           
+                distanceCounter.enabled = false;
+                generateLevel.enabled = false;
+                endRunSequence.enabled = true;
+
+
+                if (crashChar != null)
+                    crashChar.Play();
+
+
+                if (animator != null)
+                    animator.GetComponent<Animator>().Play("Stumble Backwards");
+
+
+            }
         }
-    }
+    
 }

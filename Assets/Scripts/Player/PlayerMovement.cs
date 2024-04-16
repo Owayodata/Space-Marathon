@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 5;
+    public static float movementSpeed = 5;
     public float maxSpeed = 15;
 
 
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerAnim;
     public Rigidbody rbody;
     [SerializeField] private float jumpingPower = 6f;
-    private bool isGrounded;
+    static public bool isGrounded;
 
 
     // Start is called before the first frame update
@@ -49,10 +49,10 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        
+        
 
-            if (Input.mousePosition.x > Screen.width / 2 && Input.mousePosition.y < Screen.height / 2)
+            if (SwipeManager.swipeRight)
             {
                 if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
                 {
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-            else if (Input.mousePosition.x < Screen.width / 2 && Input.mousePosition.y < Screen.height / 2)
+            else if (SwipeManager.swipeLeft)
             {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide)
                 {
@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-            if (Input.mousePosition.y > Screen.height / 2 && isGrounded)
+            if (SwipeManager.swipeUp && isGrounded)
             {
                 
                 rbody.velocity = Vector3.zero;
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             }
-        }
+        
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
 

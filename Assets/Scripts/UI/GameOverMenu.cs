@@ -7,6 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     public void Restart()
     {
+        PlayerMovement.movementSpeed = 5f;
         SceneManager.LoadScene("TheGame");
     }
     public void MainMenu()
