@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5110767419239441812}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.01, z: 0.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6577935690713603679}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6577935689629242237
 GameObject:
@@ -57,13 +57,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577935689629242237}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.20629205, y: -0, z: -0, w: 0.9784905}
   m_LocalPosition: {x: 0, y: 4.6, z: -3.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6577935690713603679}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 23.81, y: 0, z: 0}
 --- !u!20 &6577935689629242233
 Camera:
@@ -79,9 +79,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -152,7 +160,7 @@ GameObject:
   - component: {fileID: 6577935690713603680}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +172,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577935690713603681}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.51, z: -8.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -174,7 +183,6 @@ Transform:
   - {fileID: 130977555423297579}
   - {fileID: 3072201729220416800}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6577935690713603676
 MonoBehaviour:
@@ -188,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b320e4dd49f980d44842bb15e8f125fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 15
   leftRightSpeed: 4
   laneDistance: 4
   playerAnim: {fileID: 6307551284695728281}
@@ -202,9 +209,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577935690713603681}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.5774279, z: 1}
   m_Center: {x: 0, y: 0.790488, z: 0}
 --- !u!54 &6577935690713603682
@@ -214,10 +229,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577935690713603681}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -245,6 +271,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6577935690713603679}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0def36429f296dd4693807dfc8d3d3b0,
@@ -308,6 +335,13 @@ PrefabInstance:
       value: Astronaut Explorer Low Poly@Standard Run
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0def36429f296dd4693807dfc8d3d3b0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6577935689949920709}
   m_SourcePrefab: {fileID: 100100000, guid: 0def36429f296dd4693807dfc8d3d3b0, type: 3}
 --- !u!1 &6307551284695728281 stripped
 GameObject:
@@ -347,6 +381,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6577935690713603679}
     m_Modifications:
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
@@ -429,8 +464,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001295033417148091, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7791836691491908066, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9001295033417148091, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92333116363072627}
+    - targetCorrespondingSourceObject: {fileID: 9001295033417148091, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545245652643803358}
   m_SourcePrefab: {fileID: 100100000, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f, type: 3}
 --- !u!1 &1724053254664334223 stripped
 GameObject:
@@ -446,9 +497,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724053254664334223}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!122 &1545245652643803358

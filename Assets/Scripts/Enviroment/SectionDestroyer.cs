@@ -5,21 +5,14 @@ using UnityEngine;
 public class SectionDestroyer : MonoBehaviour
 {
 
-    public string parentName;
+    public GameObject Section;
 
-    // Update is called once per frame
-    void Start()
+    private void OnTriggerExit(Collider other)
     {
-        parentName = transform.name;
-        StartCoroutine(DestroyClone());
-    }
-
-    IEnumerator DestroyClone()
-    {
-        yield return new WaitForSeconds(120);
-        if (parentName == "Section(Clone)")
+        if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Destroy(Section, 3);
+            Debug.Log("Collision Worked...");
         }
     }
 }

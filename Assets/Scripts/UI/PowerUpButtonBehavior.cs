@@ -31,34 +31,37 @@ public class PowerUpButtonBehavior : MonoBehaviour
 
     public void speedUp()
     {
-        
-        if(PlayerMovement.isGrounded == true)
-        StartCoroutine(speedUpRoutine());
-        
-        
-
-
-        IEnumerator speedUpRoutine()
-        {
-           
-            rbodyCollider.GetComponent<Rigidbody>().useGravity = false;
-            rbodyCollider.GetComponent<BoxCollider>().enabled = false;
-            PlayerMovement.isGrounded = false;
-            shield.gameObject.SetActive(true);
-            PlayerMovement.movementSpeed *= 2f;
-
-            yield return new WaitForSeconds(5);
-            shield.GetComponent<Animator>().enabled = true;
-            PlayerMovement.movementSpeed = 7f;
-
-            yield return new WaitForSeconds(2);
-            PlayerMovement.isGrounded = true;
-            rbodyCollider.GetComponent<Rigidbody>().useGravity = true;
-            rbodyCollider.GetComponent<BoxCollider>().enabled = true;
-            shield.GetComponent<Animator>().enabled = false;
-            shield.gameObject.SetActive(false);
-            SpeedBTN.gameObject.SetActive(false);
-        }
+        if (PlayerMovement.isGrounded == true)
+            StartCoroutine(speedUpRoutine());
     }
+
+    IEnumerator speedUpRoutine()
+    {
+        rbodyCollider.GetComponent<Rigidbody>().useGravity = false;
+        rbodyCollider.GetComponent<BoxCollider>().enabled = false;
+        PlayerMovement.isGrounded = false;
+        shield.gameObject.SetActive(true);
+
+        // Store the original movement speed
+        float originalSpeed = PlayerMovement.movementSpeed;
+
+        // Increase the movement speed by a factor of 2, but not exceeding 15
+        PlayerMovement.movementSpeed = Mathf.Min(PlayerMovement.movementSpeed * 2f, 15f);
+
+        yield return new WaitForSeconds(5);
+
+        // Restore the original movement speed
+        shield.GetComponent<Animator>().enabled = true;
+        PlayerMovement.movementSpeed = originalSpeed;
+
+        yield return new WaitForSeconds(2);
+        PlayerMovement.isGrounded = true;
+        rbodyCollider.GetComponent<Rigidbody>().useGravity = true;
+        rbodyCollider.GetComponent<BoxCollider>().enabled = true;
+        shield.GetComponent<Animator>().enabled = false;
+        shield.gameObject.SetActive(false);
+        SpeedBTN.gameObject.SetActive(false);
+    }
+
 
 }

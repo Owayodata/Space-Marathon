@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static float movementSpeed = 5;
-    public float maxSpeed = 15;
+    public static float maxSpeed = 15;
 
 
     public float leftRightSpeed = 4;

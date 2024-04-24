@@ -12,6 +12,7 @@ public class GameOverMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        PlayerMovement.movementSpeed = 5f;
         SceneManager.LoadScene("MainMenu");
     }
 }
