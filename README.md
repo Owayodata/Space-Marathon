@@ -1,3 +1,3 @@
 Space Marathon README
 
-a mobile endless runner game made by Unity3D by Atakan Özcan
+a mobile endless runner game made by Atakan Özcan with Unity3D
