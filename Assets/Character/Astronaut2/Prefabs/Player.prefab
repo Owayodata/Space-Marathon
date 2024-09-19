@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 6577935690713603677}
   - component: {fileID: 6577935690713603682}
   - component: {fileID: 6577935690713603680}
+  - component: {fileID: -3968901738166473954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -216,7 +217,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -266,6 +267,27 @@ MonoBehaviour:
   levelControl: {fileID: 0}
   animator: {fileID: 6307551284695728281}
   shield: {fileID: 1724053254664334223}
+--- !u!65 &-3968901738166473954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577935690713603681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.15, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6577935689949920712
 PrefabInstance:
   m_ObjectHideFlags: 0

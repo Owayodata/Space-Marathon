@@ -9,10 +9,12 @@ public class EndRunSequence : MonoBehaviour
     public GameObject endScreen;
     public GameObject fadeOut;
     public GameObject hud;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(endSequence());
+        
     }
 
     IEnumerator endSequence()
@@ -21,7 +23,7 @@ public class EndRunSequence : MonoBehaviour
         liveCoins.SetActive(false);
         hud.SetActive(false);
         liveDis.SetActive(false);
-        endScreen.SetActive(true);
+        endScreen.SetActive(true);        
         yield return new WaitForSeconds(5);
         fadeOut.SetActive(true);
     }

@@ -37,9 +37,7 @@ public class PowerUpButtonBehavior : MonoBehaviour
 
     IEnumerator speedUpRoutine()
     {
-        rbodyCollider.GetComponent<Rigidbody>().useGravity = false;
         rbodyCollider.GetComponent<BoxCollider>().enabled = false;
-        PlayerMovement.isGrounded = false;
         shield.gameObject.SetActive(true);
 
         // Store the original movement speed
@@ -55,8 +53,6 @@ public class PowerUpButtonBehavior : MonoBehaviour
         PlayerMovement.movementSpeed = originalSpeed;
 
         yield return new WaitForSeconds(2);
-        PlayerMovement.isGrounded = true;
-        rbodyCollider.GetComponent<Rigidbody>().useGravity = true;
         rbodyCollider.GetComponent<BoxCollider>().enabled = true;
         shield.GetComponent<Animator>().enabled = false;
         shield.gameObject.SetActive(false);
