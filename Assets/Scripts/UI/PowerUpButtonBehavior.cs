@@ -43,8 +43,8 @@ public class PowerUpButtonBehavior : MonoBehaviour
         // Store the original movement speed
         float originalSpeed = PlayerMovement.movementSpeed;
 
-        // Increase the movement speed by a factor of 2, but not exceeding 15
-        PlayerMovement.movementSpeed = Mathf.Min(PlayerMovement.movementSpeed * 2f, 15f);
+        // Increase the movement speed by a factor of 2, but not exceeding 10
+        PlayerMovement.movementSpeed = Mathf.Min(PlayerMovement.movementSpeed * 2f, 12f);
 
         yield return new WaitForSeconds(5);
 

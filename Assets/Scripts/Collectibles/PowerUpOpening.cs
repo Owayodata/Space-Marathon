@@ -13,7 +13,7 @@ public class PowerUpOpening : MonoBehaviour
         {
             powerUpSFX.Play();
             powerUp.SetActive(true);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     // Update is called once per frame

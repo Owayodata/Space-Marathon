@@ -414,17 +414,17 @@ PrefabInstance:
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
@@ -434,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,
         type: 3}
@@ -548,7 +548,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4287395840
-  m_Size: 1.5
+  m_Size: 2.5
 --- !u!4 &7874673256669769769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4730099412188567572, guid: 921ac60fce91f9b40b9e8d52a0b3ca3f,

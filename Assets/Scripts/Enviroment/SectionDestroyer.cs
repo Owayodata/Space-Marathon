@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class SectionDestroyer : MonoBehaviour
 {
-
     public GameObject Section;
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(Section, 3);
-            Debug.Log("Collision Worked...");
+            
+            Debug.Log("Section will be destroyed in 3 seconds...");
+
+            
+            Invoke(nameof(DeactivateSection), 3f);
         }
+    }
+
+    void DeactivateSection()
+    {
+        Section.SetActive(false); 
+        Debug.Log("Section Destroyed...");
     }
 }

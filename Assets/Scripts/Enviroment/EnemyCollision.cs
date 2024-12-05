@@ -11,7 +11,7 @@ public class EnemyCollision : MonoBehaviour
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

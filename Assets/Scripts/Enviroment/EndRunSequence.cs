@@ -19,12 +19,12 @@ public class EndRunSequence : MonoBehaviour
 
     IEnumerator endSequence()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         liveCoins.SetActive(false);
         hud.SetActive(false);
         liveDis.SetActive(false);
         endScreen.SetActive(true);        
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         fadeOut.SetActive(true);
     }
 }

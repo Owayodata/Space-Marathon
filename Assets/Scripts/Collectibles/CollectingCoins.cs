@@ -8,9 +8,12 @@ public class CollectingCoins : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        coinFX.Play();
-        CollectableScore.CoinCount += 1;
-        this.gameObject.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            coinFX.Play();
+            CollectableScore.CoinCount += 1;
+            this.gameObject.SetActive(false);
+        }
 
     }
 }
